@@ -64,7 +64,7 @@ end
 for k, v in pairs(units) do
 
 	v.collision_mask = v.collision_mask or {"player-layer", "train-layer"} -- if no collision mask then the hardcoded one
-	table.insert (v.collision_mask, "layer-12")
+	table.insert (v.collision_mask, "layer-13")
 
 end
 
@@ -119,7 +119,7 @@ end
 
 
 --- Adjust N.E. Building spawners to N.E. Enemy Settings
-if mods["Natural_Evolution_Enemies"] then
+if mods["Natural_Evolution_Enemies"] or mods["Nova-Natural_Evolution_Enemies"] then
 
 	-- Natural Evolution Biter Spawner Adjustments 
 	data.raw["unit-spawner"]["Natural_Evolution_Biter-Spawner"].max_count_of_owned_units = data.raw["unit-spawner"]["biter-spawner"].max_count_of_owned_units
