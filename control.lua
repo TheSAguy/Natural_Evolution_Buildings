@@ -1,4 +1,4 @@
--- NE BUILDINGS Ver = 0.18.04
+-- NE BUILDINGS Ver = 1.1.01
 local QC_Mod = false
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local Event = require('__stdlib__/stdlib/event/event').set_protected_mode(true)

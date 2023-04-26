@@ -1,76 +1,52 @@
-data:extend(
-{
-
-  {
+data:extend({{
     type = "item-group",
     name = "Natural-Evolution",
-	icon = "__Natural_Evolution_Buildings__/graphics/icons/AlienUnderstanding.png",
-	icon_size = 64,
+    icon = "__Natural_Evolution_Buildings__/graphics/icons/AlienUnderstanding.png",
+    icon_size = 64,
     inventory_order = "y",
-    order = "z",
-  },
-
-  {
+    order = "z"
+}, {
     type = "item-subgroup",
     name = "biters",
     group = "Natural-Evolution",
-    order = "a",
-  },
-
-  {
+    order = "a"
+}, {
     type = "item-subgroup",
     name = "spitters",
     group = "Natural-Evolution",
-    order = "b",
-  },
-
-  {
+    order = "b"
+}, {
     type = "item-subgroup",
     name = "Spawners",
     group = "Natural-Evolution",
-    order = "c",
-  },
-
-  {
+    order = "c"
+}, {
     type = "item-subgroup",
     name = "worms",
     group = "Natural-Evolution",
-    order = "d",
-  },
-
-  {
+    order = "d"
+}, {
     type = "item-subgroup",
     name = "Tools",
     group = "Natural-Evolution",
-    order = "e",
-  },
-
-  {
+    order = "e"
+}, {
     type = "item-subgroup",
     name = "Evolution-fluids",
     group = "Natural-Evolution",
-    order = "f",
-  },
-
-  {
+    order = "f"
+}, {
     type = "item-subgroup",
     name = "Materials",
     group = "Natural-Evolution",
-    order = "g",
-  },
-
-  {
+    order = "g"
+}, {
     type = "item-subgroup",
     name = "Natural-Evolution",
     group = "Natural-Evolution",
-    order = "h",
-  },
-  
-    {
+    order = "h"
+}, {
     type = "ammo-category",
     name = "Terraforming_Station",
     order = "1"
-  },
-  
-  
-})
+}})

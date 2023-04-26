@@ -1,34 +1,26 @@
-local sounds = require("__base__.prototypes.entity.demo-sounds")
+local sounds = require("__base__.prototypes.entity.sounds")
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
 
-data:extend(
-{
-
-  {
+data:extend({{
     type = "unit",
     name = "tame-small-spitter",
     icon = ICONPATH .. "small-spitter.png",
     icon_size = 64,
-    icons = {
-      {
+    icons = {{
         icon = ICONPATH .. "small-spitter.png",
-        icon_size = 64,
-      }
-    }, 
+        icon_size = 64
+    }},
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
     max_health = 10,
-    order="b-b-d",
-    subgroup="enemies",
-    resistances =
-    {
-      {
+    order = "b-b-d",
+    subgroup = "enemies",
+    resistances = {{
         type = "acid",
         percent = 100
-      }
-    },
-	alert_when_damaged = false,
-	alert_when_attacking = false,	
+    }},
+    alert_when_damaged = false,
+    alert_when_attacking = false,
     healing_per_tick = 0.01,
     collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
@@ -38,17 +30,16 @@ data:extend(
     max_pursue_distance = 50,
 
     alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
-    attack_parameters = spitter_attack_parameters(
-    {
-      acid_stream_name = "acid-stream-spitter-small",
-      range=range_spitter_small,
-      min_attack_distance=10,
-      cooldown=100,
-      damage_modifier=damage_modifier_spitter_small,
-      scale=scale_spitter_small,
-      tint1=tint_1_spitter_small,
-      tint2=tint_2_spitter_small,
-      roarvolume=0.4
+    attack_parameters = spitter_attack_parameters({
+        acid_stream_name = "acid-stream-spitter-small",
+        range = range_spitter_small,
+        min_attack_distance = 10,
+        cooldown = 100,
+        damage_modifier = damage_modifier_spitter_small,
+        scale = scale_spitter_small,
+        tint1 = tint_1_spitter_small,
+        tint2 = tint_2_spitter_small,
+        roarvolume = 0.4
     }),
     vision_distance = 30,
     movement_speed = 0.185,
@@ -62,35 +53,28 @@ data:extend(
     dying_sound = sounds.spitter_dying(0.4),
     run_animation = spitterrunanimation(scale_spitter_small, tint_1_spitter_small, tint_2_spitter_small),
     ai_settings = biter_ai_settings
-  },
-  {
+}, {
     type = "unit",
     name = "tame-medium-spitter",
     icon = ICONPATH .. "medium-spitter.png",
     icon_size = 64,
-    icons = {
-      {
+    icons = {{
         icon = ICONPATH .. "medium-spitter.png",
-        icon_size = 64,
-      }
-    }, 
+        icon_size = 64
+    }},
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
     max_health = 50,
-    order="b-b-e",
-    subgroup="enemies",
-    resistances =
-    {
-      {
+    order = "b-b-e",
+    subgroup = "enemies",
+    resistances = {{
         type = "explosion",
         percent = 10
-      },
-      {
+    }, {
         type = "acid",
         percent = 100
-      }
-    },
-	alert_when_damaged = false,
-	alert_when_attacking = false,	
+    }},
+    alert_when_damaged = false,
+    alert_when_attacking = false,
     healing_per_tick = 0.01,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
     selection_box = {{-0.5, -0.7}, {0.5, 0.7}},
@@ -99,17 +83,16 @@ data:extend(
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
     alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
-    attack_parameters = spitter_attack_parameters(
-    {
-      acid_stream_name = "acid-stream-spitter-medium",
-      range=range_spitter_medium,
-      min_attack_distance=10,
-      cooldown=100,
-      damage_modifier=damage_modifier_spitter_medium,
-      scale=scale_spitter_medium,
-      tint1=tint_1_spitter_medium,
-      tint2=tint_2_spitter_medium,
-      roarvolume=0.5
+    attack_parameters = spitter_attack_parameters({
+        acid_stream_name = "acid-stream-spitter-medium",
+        range = range_spitter_medium,
+        min_attack_distance = 10,
+        cooldown = 100,
+        damage_modifier = damage_modifier_spitter_medium,
+        scale = scale_spitter_medium,
+        tint1 = tint_1_spitter_medium,
+        tint2 = tint_2_spitter_medium,
+        roarvolume = 0.5
     }),
     vision_distance = 30,
     movement_speed = 0.165,
@@ -122,35 +105,28 @@ data:extend(
     dying_sound = sounds.spitter_dying(0.5),
     run_animation = spitterrunanimation(scale_spitter_medium, tint_1_spitter_medium, tint_2_spitter_medium),
     ai_settings = biter_ai_settings
-  },
-  {
+}, {
     type = "unit",
     name = "tame-big-spitter",
     icon = ICONPATH .. "big-spitter.png",
     icon_size = 64,
-    icons = {
-      {
+    icons = {{
         icon = ICONPATH .. "big-spitter.png",
-        icon_size = 64,
-      }
-    }, 
+        icon_size = 64
+    }},
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
     max_health = 200,
-    order="b-b-f",
-    subgroup="enemies",
-    resistances =
-    {
-      {
+    order = "b-b-f",
+    subgroup = "enemies",
+    resistances = {{
         type = "explosion",
         percent = 15
-      },
-      {
+    }, {
         type = "acid",
         percent = 100
-      }
-    },
-	alert_when_damaged = false,
-	alert_when_attacking = false,	
+    }},
+    alert_when_damaged = false,
+    alert_when_attacking = false,
     spawning_time_modifier = 3,
     healing_per_tick = 0.01,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
@@ -160,17 +136,16 @@ data:extend(
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
     alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
-    attack_parameters = spitter_attack_parameters(
-    {
-      acid_stream_name = "acid-stream-spitter-big",
-      range=range_spitter_big,
-      min_attack_distance=10,
-      cooldown=100,
-      damage_modifier=damage_modifier_spitter_big,
-      scale=scale_spitter_big,
-      tint1=tint_1_spitter_big,
-      tint2=tint_2_spitter_big,
-      roarvolume=0.6
+    attack_parameters = spitter_attack_parameters({
+        acid_stream_name = "acid-stream-spitter-big",
+        range = range_spitter_big,
+        min_attack_distance = 10,
+        cooldown = 100,
+        damage_modifier = damage_modifier_spitter_big,
+        scale = scale_spitter_big,
+        tint1 = tint_1_spitter_big,
+        tint2 = tint_2_spitter_big,
+        roarvolume = 0.6
     }),
     vision_distance = 30,
     movement_speed = 0.15,
@@ -183,35 +158,28 @@ data:extend(
     dying_sound = sounds.spitter_dying(0.6),
     run_animation = spitterrunanimation(scale_spitter_big, tint_1_spitter_big, tint_2_spitter_big),
     ai_settings = biter_ai_settings
-  },   
-  {
+}, {
     type = "unit",
     name = "tame-behemoth-spitter",
     icon = ICONPATH .. "behemoth-spitter.png",
     icon_size = 64,
-    icons = {
-      {
+    icons = {{
         icon = ICONPATH .. "behemoth-spitter.png",
-        icon_size = 64,
-      }
-    }, 
+        icon_size = 64
+    }},
     flags = {"placeable-player", "placeable-enemy", "placeable-off-grid", "breaths-air", "not-repairable"},
     max_health = 1500,
-    order="b-b-f",
-    subgroup="enemies",
-    resistances =
-    {
-      {
+    order = "b-b-f",
+    subgroup = "enemies",
+    resistances = {{
         type = "explosion",
         percent = 30
-      },
-      {
+    }, {
         type = "acid",
         percent = 100
-      }
-    },
-	alert_when_damaged = false,
-	alert_when_attacking = false,	
+    }},
+    alert_when_damaged = false,
+    alert_when_attacking = false,
     spawning_time_modifier = 12,
     healing_per_tick = 0.1,
     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
@@ -221,17 +189,16 @@ data:extend(
     min_pursue_time = 10 * 60,
     max_pursue_distance = 50,
     alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
-    attack_parameters = spitter_attack_parameters(
-    {
-      acid_stream_name = "acid-stream-spitter-behemoth",
-      range=range_spitter_behemoth,
-      min_attack_distance=10,
-      cooldown=100,
-      damage_modifier=damage_modifier_spitter_behemoth,
-      scale=scale_spitter_behemoth,
-      tint1=tint_1_spitter_behemoth,
-      tint2=tint_2_spitter_behemoth,
-      roarvolume=0.8
+    attack_parameters = spitter_attack_parameters({
+        acid_stream_name = "acid-stream-spitter-behemoth",
+        range = range_spitter_behemoth,
+        min_attack_distance = 10,
+        cooldown = 100,
+        damage_modifier = damage_modifier_spitter_behemoth,
+        scale = scale_spitter_behemoth,
+        tint1 = tint_1_spitter_behemoth,
+        tint2 = tint_2_spitter_behemoth,
+        roarvolume = 0.8
     }),
     vision_distance = 30,
     movement_speed = 0.15,
@@ -243,6 +210,4 @@ data:extend(
     dying_sound = sounds.spitter_dying(0.8),
     run_animation = spitterrunanimation(scale_spitter_behemoth, tint_1_spitter_behemoth, tint_2_spitter_behemoth),
     ai_settings = biter_ai_settings
-  },
-  
-})
+}})
