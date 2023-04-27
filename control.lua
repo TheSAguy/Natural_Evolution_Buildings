@@ -4,7 +4,6 @@ local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local Event = require('__stdlib__/stdlib/event/event').set_protected_mode(true)
 
 require("util")
-require("control_bio_cannon")
 require("control_artifact_collector")
 require("control_acs")
 require("control_terraforming")
@@ -45,11 +44,6 @@ local function On_Init()
     global.world.itemCollectorLookup = {}
     global.world.itemCollectorEvents = {}
 
-    --- For Bio Cannon
-    if global.Bio_Cannon_Table ~= nil then
-        Event.register(defines.events.on_tick, function(event)
-        end)
-    end
 
     ---- Evolution_MOD
     if global.Evolution_MOD == nil then
@@ -144,11 +138,7 @@ end
 --------------------------------------------------------------------
 local function On_Load()
 
-    --- For Bio Cannon
-    if global.Bio_Cannon_Table ~= nil then
-        Event.register(defines.events.on_tick, function(event)
-        end)
-    end
+
 end
 
 ---------------------------------------------				 
@@ -162,11 +152,6 @@ local function On_Config_Change()
         EvoGUI.setup()
     end
 
-    --- For Bio Cannon
-    if global.Bio_Cannon_Table ~= nil then
-        Event.register(defines.events.on_tick, function(event)
-        end)
-    end
 
     --- Artifact Collector
     if global.world == nil then
@@ -353,50 +338,6 @@ local function On_Built(event)
         }
         -- writeDebug("The Radar # is: "..entity.unit_number)
         -- writeDebug("The Container # is: "..T_Station_Container.unit_number)
-
-    end
-
-    --- Bio Cannon (Hive Buster) has been built
-    if entity.valid and entity.name == "bi-bio-cannon-area" then
-
-        local New_Bio_Cannon
-        local New_Bio_CannonR
-
-        -- writeDebug("Bio Cannon has been built")				
-
-        -- Hidden Radar
-        New_Bio_CannonR = surface.create_entity({
-            name = "Bio-Cannon-r",
-            position = position,
-            direction = event.created_entity.direction,
-            force = force
-        })
-
-        -- New Cannon, the first was just used for Radius overlay
-        -- (If normally built -- if built from blueprint we just use the same code anyway.)
-        New_Bio_Cannon = surface.create_entity({
-            name = "bi-bio-cannon",
-            position = position,
-            direction = event.created_entity.direction,
-            force = force
-        })
-        New_Bio_Cannon.health = event.created_entity.health
-
-        New_Bio_CannonR.operable = false
-        New_Bio_CannonR.destructible = false
-        New_Bio_CannonR.minable = false
-
-        if global.Bio_Cannon_Table == nil then
-            global.Bio_Cannon_Table = {}
-            Event.register(defines.events.on_tick, function(event)
-            end)
-        end
-
-        -- Group Multiple Entities Together
-        table.insert(global.Bio_Cannon_Table, {New_Bio_Cannon, New_Bio_CannonR, 0})
-
-        -- Remove the "Overlay" Entity
-        event.created_entity.destroy()
 
     end
 
