@@ -1,7 +1,7 @@
 data:extend({{
     type = "technology",
     name = "bi_tech_bio_cannon",
-    icon_size = 128,
+    icon_size = 256,
     icon = "__Natural_Evolution_Buildings__/graphics/technology/bi-tech-bio_cannon.png",
     effects = {{
         type = "unlock-recipe",
