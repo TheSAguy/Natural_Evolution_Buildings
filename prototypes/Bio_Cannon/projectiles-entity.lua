@@ -1,3 +1,7 @@
+local NEBuildings = require('common')('Natural_Evolution_Buildings')
+
+local ICONPATH = NEBuildings.modRoot .. "/graphics/entities/bio_cannon/projectiles/"
+
 require "util"
 
 if mods["Natural_Evolution_Enemies"] or mods["Nova-Natural_Evolution_Enemies"] then
@@ -51,7 +55,7 @@ data:extend({ -- Projectile
         size = 3
     },
     animation = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Basic_Ammo.png",
+        filename = ICONPATH .. "bio_cannon_proto_ammo.png",
         priority = "extra-high",
         width = 18,
         height = 47,
@@ -59,7 +63,7 @@ data:extend({ -- Projectile
         frame_count = 1
     },
     shadow = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Ammo-shadow.png",
+        filename = ICONPATH .. "bio_cannon_ammo-shadow.png",
         priority = "extra-high",
         width = 18,
         height = 47,
@@ -136,14 +140,14 @@ data:extend({ -- Projectile
         size = 6
     },
     animation = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Basic_Ammo.png",
+        filename = ICONPATH .. "bio_cannon_basic_ammo.png",
         priority = "extra-high",
         width = 18,
         height = 47,
         frame_count = 1
     },
     shadow = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Ammo-shadow.png",
+        filename = ICONPATH .. "bio_cannon_ammo-shadow.png",
         priority = "extra-high",
         width = 18,
         height = 47,
@@ -233,14 +237,14 @@ data:extend({ -- Projectile
         size = 7
     },
     animation = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Poison_Ammo.png",
+        filename = ICONPATH .. "bio_cannon_poison_ammo.png",
         priority = "extra-high",
         width = 18,
         height = 47,
         frame_count = 1
     },
     shadow = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Ammo-shadow.png",
+        filename = ICONPATH .. "bio_cannon_ammo-shadow.png",
         priority = "extra-high",
         width = 18,
         height = 47,
@@ -330,14 +334,14 @@ data:extend({ -- Projectile
         size = 8
     },
     animation = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Bio_Ammo.png",
+        filename = ICONPATH .. "bio_cannon_bio_ammo.png",
         priority = "extra-high",
         width = 18,
         height = 47,
         frame_count = 1
     },
     shadow = {
-        filename = "__Natural_Evolution_Buildings__/graphics/entities/bio_cannon/projectiles/Bio_Cannon_Ammo-shadow.png",
+        filename = ICONPATH .. "bio_cannon_ammo-shadow.png",
         priority = "extra-high",
         width = 18,
         height = 47,
