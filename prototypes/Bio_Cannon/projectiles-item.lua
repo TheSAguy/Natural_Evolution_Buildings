@@ -1,14 +1,14 @@
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
-local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
+local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/weapon/"
 
 data:extend({ -- Prototype Artillery Proto Ammo
 {
     type = "ammo",
     name = "bi-bio-cannon-proto-ammo",
-    icon = ICONPATH .. "Bio_Cannon_Proto_Ammo_Icon.png",
+    icon = ICONPATH .. "bio_cannon_proto_ammo_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Bio_Cannon_Proto_Ammo_Icon.png",
+        icon = ICONPATH .. "bio_cannon_proto_ammo_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -34,10 +34,10 @@ data:extend({ -- Prototype Artillery Proto Ammo
 {
     type = "ammo",
     name = "bi-bio-cannon-basic-ammo",
-    icon = ICONPATH .. "Bio_Cannon_Basic_Ammo_Icon.png",
+    icon = ICONPATH .. "bio_cannon_basic_ammo_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Bio_Cannon_Basic_Ammo_Icon.png",
+        icon = ICONPATH .. "bio_cannon_basic_ammo_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -63,10 +63,10 @@ data:extend({ -- Prototype Artillery Proto Ammo
 {
     type = "ammo",
     name = "bi-bio-cannon-poison-ammo",
-    icon = ICONPATH .. "Bio_Cannon_Poison_Ammo_Icon.png",
+    icon = ICONPATH .. "bio_cannon_poison_ammo_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Bio_Cannon_Poison_Ammo_Icon.png",
+        icon = ICONPATH .. "bio_cannon_poison_ammo_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -92,10 +92,10 @@ data:extend({ -- Prototype Artillery Proto Ammo
 {
     type = "ammo",
     name = "bi-bio-cannon-biological-ammo",
-    icon = ICONPATH .. "Bio_Cannon_Bio_Ammo_Icon.png",
+    icon = ICONPATH .. "bio_cannon_bio_ammo_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Bio_Cannon_Bio_Ammo_Icon.png",
+        icon = ICONPATH .. "bio_cannon_bio_ammo_icon.png",
         icon_size = 64
     }},
     ammo_type = {
