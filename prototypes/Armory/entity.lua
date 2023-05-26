@@ -1,6 +1,8 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
+local W_ICONPATH = NEBuildings.modRoot .. "/graphics/icons/weapon/"
+
 require("util")
 
 if settings.startup["NE_Difficulty"] and settings.startup["NE_Difficulty"].value then
@@ -86,14 +88,16 @@ table.insert(data.raw.technology["physical-projectile-damage-7"].effects, {
 })
 
 -- Ammo
-data:extend({ --- Basic Dart
+data:extend({ 
+    
+--- Basic Dart
 {
     type = "ammo",
     name = "bi-basic-dart-magazine",
-    icon = ICONPATH .. "basic_dart_icon.png",
+    icon = W_ICONPATH .. "basic_dart_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "basic_dart_icon.png",
+        icon = W_ICONPATH .. "basic_dart_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -123,14 +127,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aaa]-a[basic-clips]-aa[firearm-magazine]",
     stack_size = 400
-}, --- Standard Dart
+}, 
+
+--- Standard Dart
 {
     type = "ammo",
     name = "bi-standard-dart-magazine",
-    icon = ICONPATH .. "standard_dart_icon.png",
+    icon = W_ICONPATH .. "standard_dart_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "standard_dart_icon.png",
+        icon = W_ICONPATH .. "standard_dart_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -166,14 +172,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aab]-a[basic-clips]-ab[firearm-magazine]",
     stack_size = 400
-}, --- Enhanced Dart
+}, 
+
+--- Enhanced Dart
 {
     type = "ammo",
     name = "bi-enhanced-dart-magazine",
-    icon = ICONPATH .. "enhanced_dart_icon.png",
+    icon = W_ICONPATH .. "enhanced_dart_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "enhanced_dart_icon.png",
+        icon = W_ICONPATH .. "enhanced_dart_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -215,14 +223,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aac]-a[basic-clips]-ac[firearm-magazine]",
     stack_size = 400
-}, --- Poison Dart
+}, 
+
+--- Poison Dart
 {
     type = "ammo",
     name = "bi-poison-dart-magazine",
-    icon = ICONPATH .. "poison_dart_icon.png",
+    icon = W_ICONPATH .. "poison_dart_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "poison_dart_icon.png",
+        icon = W_ICONPATH .. "poison_dart_icon.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -270,14 +280,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aad]-a[basic-clips]-ad[firearm-magazine]",
     stack_size = 400
-}, --- Copper Bullet
+}, 
+
+--- Copper Bullet
 {
     type = "ammo",
     name = "copper-bullet-magazine",
-    icon = ICONPATH .. "copper_magazine.png",
+    icon = W_ICONPATH .. "copper_magazine.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "copper_magazine.png",
+        icon = W_ICONPATH .. "copper_magazine.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -314,14 +326,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-aa[firearm-magazine]",
     stack_size = 200
-}, --- Biological Bullet
+}, 
+
+--- Biological Bullet
 {
     type = "ammo",
     name = "Biological-bullet-magazine",
-    icon = ICONPATH .. "Biological-bullet-magazine.png",
+    icon = W_ICONPATH .. "Biological-bullet-magazine.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Biological-bullet-magazine.png",
+        icon = W_ICONPATH .. "Biological-bullet-magazine.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -360,15 +374,17 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-b[piercing-rounds-magazine]-c[Biological-bullet-magazine]",
     stack_size = 200
-}, ---------------------- CONVERSION ----------------
+}, 
+
+---------------------- CONVERSION ----------------
 --- Conversion Basic Dart
 {
     type = "ammo",
     name = "bi-basic-dart-magazine_c",
-    icon = ICONPATH .. "basic_dart_icon_conversion.png",
+    icon = W_ICONPATH .. "basic_dart_icon_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "basic_dart_icon_conversion.png",
+        icon = W_ICONPATH .. "basic_dart_icon_conversion.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -404,14 +420,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aaa]-a[basic-clips]-aa[firearm-magazine]-Conversion",
     stack_size = 400
-}, --- Conversion Standard Dart
+}, 
+
+--- Conversion Standard Dart
 {
     type = "ammo",
     name = "bi-standard-dart-magazine_c",
-    icon = ICONPATH .. "standard_dart_icon_conversion.png",
+    icon = W_ICONPATH .. "standard_dart_icon_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "standard_dart_icon_conversion.png",
+        icon = W_ICONPATH .. "standard_dart_icon_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -454,14 +472,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aab]-a[basic-clips]-ab[firearm-magazine]-Conversion",
     stack_size = 400
-}, --- Conversion Enhanced Dart
+}, 
+
+--- Conversion Enhanced Dart
 {
     type = "ammo",
     name = "bi-enhanced-dart-magazine_c",
-    icon = ICONPATH .. "enhanced_dart_icon_conversion.png",
+    icon = W_ICONPATH .. "enhanced_dart_icon_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "enhanced_dart_icon_conversion.png",
+        icon = W_ICONPATH .. "enhanced_dart_icon_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -510,14 +530,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aac]-a[basic-clips]-ac[firearm-magazine]-Conversion",
     stack_size = 400
-}, --- Conversion Poison Dart
+}, 
+
+--- Conversion Poison Dart
 {
     type = "ammo",
     name = "bi-poison-dart-magazine_c",
-    icon = ICONPATH .. "poison_dart_icon_conversion.png",
+    icon = W_ICONPATH .. "poison_dart_icon_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "poison_dart_icon_conversion.png",
+        icon = W_ICONPATH .. "poison_dart_icon_conversion.png",
         icon_size = 64
     }},
     ammo_type = {
@@ -571,7 +593,9 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "[aad]-a[basic-clips]-ad[firearm-magazine]-Conversion",
     stack_size = 400
-}, --- Conversion firearm-magazine
+}, 
+
+--- Conversion firearm-magazine
 {
     type = "ammo",
     name = "firearm-magazine_c",
@@ -615,14 +639,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-a[firearm-magazine]-Conversion",
     stack_size = 200
-}, --- Conversion Copper Bullet
+}, 
+
+--- Conversion Copper Bullet
 {
     type = "ammo",
     name = "copper-bullet-magazine_c",
-    icon = ICONPATH .. "copper_magazine_conversion.png",
+    icon = W_ICONPATH .. "copper_magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "copper_magazine_conversion.png",
+        icon = W_ICONPATH .. "copper_magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -665,14 +691,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-aa[firearm-magazine]-Conversion",
     stack_size = 200
-}, --- Conversion piercing-rounds-magazine  
+}, 
+
+--- Conversion piercing-rounds-magazine  
 {
     type = "ammo",
     name = "piercing-rounds-magazine_c",
-    icon = ICONPATH .. "piercing-rounds-magazine_conversion.png",
+    icon = W_ICONPATH .. "piercing-rounds-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "piercing-rounds-magazine_conversion.png",
+        icon = W_ICONPATH .. "piercing-rounds-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -715,14 +743,16 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-b[piercing-rounds-magazine]-Conversion",
     stack_size = 200
-}, ----- Conversion uranium-rounds-magazine
+}, 
+
+----- Conversion uranium-rounds-magazine
 {
     type = "ammo",
     name = "uranium-rounds-magazine_c",
-    icon = ICONPATH .. "uranium-rounds-magazine_conversion.png",
+    icon = W_ICONPATH .. "uranium-rounds-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "uranium-rounds-magazine_conversion.png",
+        icon = W_ICONPATH .. "uranium-rounds-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -759,7 +789,9 @@ data:extend({ --- Basic Dart
     subgroup = "ammo",
     order = "a[basic-clips]-c[uranium-rounds-magazine]-Conversion",
     stack_size = 200
-}, --- Conversion Biological Bullet
+}, 
+
+--- Conversion Biological Bullet
 {
     type = "ammo",
     name = "Biological-bullet-magazine_c",
@@ -900,7 +932,6 @@ data:extend({{
     }
 }})
 
---- NE Turret Pictires
 --- NE Turret Pictires
 function base_picture(tint)
     return {
@@ -1213,7 +1244,9 @@ data:extend({ --- Dart Turret
     },
 
     call_for_help_radius = 40
-}, --- Long Range turret
+}, 
+
+--- Long Range turret
 {
     type = "ammo-turret",
     name = "NE-gun-turret",
@@ -1264,7 +1297,9 @@ data:extend({ --- Dart Turret
     },
 
     call_for_help_radius = 40
-}, --- Rocket turret
+}, 
+
+--- Rocket turret
 {
     type = "ammo-turret",
     name = "NE-rocket-turret",
@@ -1324,10 +1359,10 @@ data:extend({{
     type = "gun",
     name = "bi-dart-rifle",
     icon = "__Natural_Evolution_Buildings__/graphics/icons/bi_dart_rifle_icon.png",
-    icon = ICONPATH .. "bi_dart_rifle_icon.png",
+    icon = W_ICONPATH .. "bi_dart_rifle_icon.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "bi_dart_rifle_icon.png",
+        icon = W_ICONPATH .. "bi_dart_rifle_icon.png",
         icon_size = 64
     }},
     subgroup = "gun",

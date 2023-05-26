@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.17
+Date: 5. 26. 2023
+  Features:
+    - Some updated Icons. Thanks Snouz!
+    - Additional compatiblilty to Industrial Revolution 3 - Still a Beta effort
+---------------------------------------------------------------------------------------------------
+Version: 1.1.16
+Date: 5. 23. 2023
+  Features:
+    - Added some compatiblilty to Industrial Revolution 3 - Very much a Beta effort
+---------------------------------------------------------------------------------------------------
 Version: 1.1.15
 Date: 5. 2. 2023
   Bugfix:

@@ -8,6 +8,17 @@ if not NE_Functions then
     NE_Functions = {}
 end
 
+
+
+if mods["IndustrialRevolution3"] then
+
+    require("prototypes.Compatibility.IR3")
+   
+end
+
+
+
+
 ---- Add Long Range  & Rocket Turret to tech tree
 thxbob.lib.tech.add_recipe_unlock("bi_tech_bio_cannon", "NE_gun_turret")
 thxbob.lib.tech.add_recipe_unlock("bi_tech_bio_cannon", "NE_rocket_turret")
@@ -328,7 +339,7 @@ for k, v in pairs(data.raw["damage-type"]) do
     end
 end
 
----------- Adds Alient Artifacts back for recipies in NE Buildings
+---------- Adds Alien Artifacts back for recipies in NE Buildings
 if settings.startup["NE_Difficulty"] and settings.startup["NE_Difficulty"].value then
     NE_Difficulty = settings.startup["NE_Difficulty"].value
 else

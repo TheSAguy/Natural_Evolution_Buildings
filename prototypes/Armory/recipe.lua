@@ -1,7 +1,9 @@
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
 
-data:extend({ --- Basic Dart Ammo
+data:extend({ 
+    
+--- Basic Dart Ammo
 {
     type = "recipe",
     name = "bi_recipe_basic_dart_magazine",
@@ -19,7 +21,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-basic-dart-magazine",
         result_count = 8
     }
-}, --- Standard Dart Ammo
+}, 
+
+--- Standard Dart Ammo
 {
     type = "recipe",
     name = "bi_recipe_standard_dart_magazine",
@@ -37,7 +41,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-standard-dart-magazine",
         result_count = 8
     }
-}, --- Enhanced Dart Ammo
+}, 
+
+--- Enhanced Dart Ammo
 {
     type = "recipe",
     name = "bi_recipe_enhanced_dart_magazine",
@@ -55,7 +61,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-enhanced-dart-magazine",
         result_count = 8
     }
-}, --- Poison Dart Ammo
+}, 
+
+--- Poison Dart Ammo
 {
     type = "recipe",
     name = "bi_recipe_poison_dart_magazine",
@@ -73,7 +81,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-poison-dart-magazine",
         result_count = 8
     }
-}, --- Copper Ammo
+}, 
+
+--- Copper Ammo
 {
     type = "recipe",
     name = "copper_bullets",
@@ -97,7 +107,9 @@ data:extend({ --- Basic Dart Ammo
         result = "copper-bullet-magazine",
         result_count = 1
     }
-}, --- piercing-rounds-magazine from Copper Ammo
+}, 
+
+--- piercing-rounds-magazine from Copper Ammo
 {
     type = "recipe",
     name = "piercing_magazine_copper",
@@ -122,7 +134,9 @@ data:extend({ --- Basic Dart Ammo
         result = "piercing-rounds-magazine",
         result_count = 1
     }
-}, --- Bio Ammo
+}, 
+
+--- Bio Ammo
 {
     type = "recipe",
     name = "Biological-bullet-magazine",
@@ -150,7 +164,9 @@ data:extend({ --- Basic Dart Ammo
         result = "Biological-bullet-magazine",
         result_count = 4
     }
-}, ---------------- Conversion ------------------------------------------------
+}, 
+
+---------------- Conversion ------------------------------------------------
 --- Conversion Basic Dart
 {
     type = "recipe",
@@ -170,7 +186,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-basic-dart-magazine_c",
         result_count = 1
     }
-}, --- Standard Dart
+}, 
+
+--- Standard Dart
 {
     type = "recipe",
     name = "bi-standard_dart_magazine_c",
@@ -189,7 +207,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-standard-dart-magazine_c",
         result_count = 1
     }
-}, --- Enhanced Dart
+}, 
+
+--- Enhanced Dart
 {
     type = "recipe",
     name = "bi-enhanced_dart_magazine_c",
@@ -208,7 +228,9 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-enhanced-dart-magazine_c",
         result_count = 1
     }
-}, --- Poison Dart
+}, 
+
+--- Poison Dart
 {
     type = "recipe",
     name = "bi-poison_dart_magazine_c",
@@ -227,12 +249,12 @@ data:extend({ --- Basic Dart Ammo
         result = "bi-poison-dart-magazine_c",
         result_count = 1
     }
-}, --- Conversion Ammo Copper
+}, 
+
+--- Conversion Ammo Copper
 {
     type = "recipe",
     name = "copper_bullets_c",
-    -- icon = "__Natural_Evolution_Buildings__/graphics/icons/ne_ammo_copper.png",
-    -- order = "x1[basic-clips]-b[piercing-rounds-magazine]-d[ne-conversion-ammo]",
     normal = {
         enabled = false,
         energy_required = 3,
@@ -247,7 +269,9 @@ data:extend({ --- Basic Dart Ammo
         result = "copper-bullet-magazine_c",
         result_count = 1
     }
-}, ---- Conversion firearm-magazine
+}, 
+
+---- Conversion firearm-magazine
 {
     type = "recipe",
     name = "firearm_magazine_c",
@@ -268,12 +292,12 @@ data:extend({ --- Basic Dart Ammo
         result_count = 1
     }
 
-}, ---- Conversion piercing-rounds-magazine
+}, 
+
+---- Conversion piercing-rounds-magazine
 {
     type = "recipe",
     name = "piercing_rounds_magazine_c",
-    -- icon = "__Natural_Evolution_Buildings__/graphics/icons/ne_ammo_copper.png",
-    -- order = "x1[basic-clips]-b[piercing-rounds-magazine]-d[ne-conversion-ammo]",
     normal = {
         enabled = false,
         energy_required = 3,
@@ -289,12 +313,12 @@ data:extend({ --- Basic Dart Ammo
         result_count = 1
     }
 
-}, ---- Conversion uranium-rounds-magazine
+}, 
+
+---- Conversion uranium-rounds-magazine
 {
     type = "recipe",
     name = "uranium_rounds_magazine_c",
-    -- icon = "__Natural_Evolution_Buildings__/graphics/icons/ne_ammo_copper.png",
-    -- order = "x1[basic-clips]-b[piercing-rounds-magazine]-d[ne-conversion-ammo]",
     normal = {
         enabled = false,
         energy_required = 4,
@@ -310,12 +334,12 @@ data:extend({ --- Basic Dart Ammo
         result_count = 1
     }
 
-}, --- Conversion Biological-bullet-magazine
+}, 
+
+--- Conversion Biological-bullet-magazine
 {
     type = "recipe",
     name = "Biological_bullet_magazine_c",
-    -- icon = "__Natural_Evolution_Buildings__/graphics/icons/ne_ammo_copper.png",
-    -- order = "x1[basic-clips]-b[piercing-rounds-magazine]-d[ne-conversion-ammo]",
     normal = {
         enabled = false,
         energy_required = 4,
@@ -330,7 +354,9 @@ data:extend({ --- Basic Dart Ammo
         result = "Biological-bullet-magazine_c",
         result_count = 1
     }
-}, ----------------------------------------------------------------
+}, 
+
+----------------------------------------------------------------
 ---- Bio Land Mine
 {
     type = "recipe",
@@ -359,6 +385,7 @@ data:extend({ --- Basic Dart Ammo
         result_count = 4
     }
 }, ----------------------------------------------------------------	
+
 --- Dart Turret
 {
     type = "recipe",
@@ -368,16 +395,14 @@ data:extend({ --- Basic Dart Ammo
         enabled = true,
         energy_required = 8,
         ingredients = {{"iron-gear-wheel", 5}, {"wood", 20}},
-        result = "bi-dart-turret",
-        result_count = 1
+        results = {{ type = "item", name = "bi-dart-turret", amount = 1 }},
     },
 
     expensive = {
         enabled = true,
         energy_required = 16,
         ingredients = {{"iron-gear-wheel", 10}, {"wood", 25}},
-        result = "bi-dart-turret",
-        result_count = 1
+        results = {{ type = "item", name = "bi-dart-turret", amount = 1 }},
     }
 
 }, --- Long Range Turret

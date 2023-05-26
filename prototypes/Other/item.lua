@@ -1,7 +1,9 @@
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
 
-data:extend({ ---- Building Materials
+data:extend({ 
+    
+    ---- Building Materials
 {
     type = "item",
     name = "Building_Materials",
@@ -14,7 +16,9 @@ data:extend({ ---- Building Materials
     subgroup = "intermediate-product",
     order = "a[iron-stick]-b[Building_Materials]",
     stack_size = 10
-}, --- Battle Marker
+}, 
+
+--- Battle Marker
 {
     type = "item",
     name = "battle_marker",
@@ -32,7 +36,9 @@ data:extend({ ---- Building Materials
 
 if not mods["Unit_Control"] then
 
-    data:extend({ --- Attractor
+    data:extend({ 
+        
+    --- Attractor
     {
         type = "item",
         name = "attractor-on",
@@ -45,7 +51,8 @@ if not mods["Unit_Control"] then
         subgroup = "Tools",
         order = "a[attractor-on]",
         stack_size = 1
-    }, {
+    }, 
+    {
         type = "item",
         name = "attractor-off",
         icon = ICONPATH .. "attractor_off.png",

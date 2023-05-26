@@ -1,4 +1,6 @@
-data:extend({ ---- Building Materials
+data:extend({ 
+    
+---- Building Materials
 {
     type = "recipe",
     name = "Building_Materials",
@@ -21,7 +23,8 @@ data:extend({ ---- Building Materials
 
 if not mods["Unit_Control"] then
 
-    data:extend({ --- Attractor ON
+    data:extend({ 
+    --- Attractor ON
     {
         type = "recipe",
         name = "attractor-on",
@@ -29,7 +32,8 @@ if not mods["Unit_Control"] then
         ingredients = {{"attractor-off", 1}},
         result = "attractor-on",
         energy_required = 0.5
-    }, --- Attractor OFF
+    }, 
+    --- Attractor OFF
     {
         type = "recipe",
         name = "attractor-off",
