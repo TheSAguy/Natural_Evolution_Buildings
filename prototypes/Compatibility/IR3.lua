@@ -65,7 +65,7 @@ if mods["IndustrialRevolution3"] then
         {"wood", 20},
         {"tin-gear-wheel", 4}
     }
-    data.raw.recipe["bi_recipe_dart_turret"].results = {
+    
     data.raw.recipe["bi_recipe_dart_turret"].results = {
         { type = "item", name = "bi-dart-turret", amount = 1 },
         { type = "item", name = "wood-chips", amount = 5 }

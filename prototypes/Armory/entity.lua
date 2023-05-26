@@ -599,10 +599,10 @@ data:extend({
 {
     type = "ammo",
     name = "firearm-magazine_c",
-    icon = ICONPATH .. "firearm-magazine_conversion.png",
+    icon = W_ICONPATH .. "firearm-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "firearm-magazine_conversion.png",
+        icon = W_ICONPATH .. "firearm-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -795,10 +795,10 @@ data:extend({
 {
     type = "ammo",
     name = "Biological-bullet-magazine_c",
-    icon = ICONPATH .. "Biological-bullet-magazine_conversion.png",
+    icon = W_ICONPATH .. "Biological-bullet-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Biological-bullet-magazine_conversion.png",
+        icon = W_ICONPATH .. "Biological-bullet-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
