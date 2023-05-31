@@ -1,15 +1,22 @@
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
+local W_ICONPATH = NEBuildings.modRoot .. "/graphics/icons/weapon/"
 
 data:extend({ 
-    
+
 --- Basic Dart Ammo
 {
     type = "recipe",
     name = "bi_recipe_basic_dart_magazine",
+    icon_size = 64,
+    icons = {{
+        icon = W_ICONPATH .. "basic_dart_icon.png",
+        icon_size = 64
+    }},
+    subgroup = "ammo",
     normal = {
         enabled = true,
-        energy_required = 4,
+        energy_required = 4,       
         ingredients = {{"wood", 10}},
         result = "bi-basic-dart-magazine",
         result_count = 10
@@ -87,10 +94,10 @@ data:extend({
 {
     type = "recipe",
     name = "copper_bullets",
-    icon = ICONPATH .. "copper_magazine.png",
+    icon = W_ICONPATH .. "copper_magazine.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "copper_magazine.png",
+        icon = W_ICONPATH .. "copper_magazine.png",
         icon_size = 64
     }},
     normal = {
@@ -113,10 +120,10 @@ data:extend({
 {
     type = "recipe",
     name = "piercing_magazine_copper",
-    icon = ICONPATH .. "piercing_magazine_copper.png",
+    icon = W_ICONPATH .. "piercing_magazine_copper.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "piercing_magazine_copper.png",
+        icon = W_ICONPATH .. "piercing_magazine_copper.png",
         icon_size = 64
     }},
     order = "a[basic-clips]-b1[piercing-rounds-magazine]",
@@ -275,8 +282,6 @@ data:extend({
 {
     type = "recipe",
     name = "firearm_magazine_c",
-    -- icon = "__Natural_Evolution_Buildings__/graphics/icons/ne_ammo_copper.png",
-    -- order = "x1[basic-clips]-b[piercing-rounds-magazine]-d[ne-conversion-ammo]",
     normal = {
         enabled = false,
         energy_required = 3,
@@ -390,7 +395,13 @@ data:extend({
 {
     type = "recipe",
     name = "bi_recipe_dart_turret",
-
+    icon = ICONPATH .. "bio_turret_icon.png",
+    icon_size = 64,
+    icons = {{
+        icon = ICONPATH .. "bio_turret_icon.png",
+        icon_size = 64
+    }},
+    subgroup = "defensive-structure",
     normal = {
         enabled = true,
         energy_required = 8,
@@ -405,7 +416,9 @@ data:extend({
         results = {{ type = "item", name = "bi-dart-turret", amount = 1 }},
     }
 
-}, --- Long Range Turret
+}, 
+
+--- Long Range Turret
 {
     type = "recipe",
     name = "NE_gun_turret",
@@ -426,7 +439,9 @@ data:extend({
         result_count = 1
     }
 
-}, --- Rocket Turret
+}, 
+
+--- Rocket Turret
 {
     type = "recipe",
     name = "NE_rocket_turret",
@@ -447,7 +462,9 @@ data:extend({
         result_count = 1
     }
 
-}, --- Dart Rifle
+}, 
+
+--- Dart Rifle
 {
     type = "recipe",
     name = "bi_recipe_bi_dart_rifle",
