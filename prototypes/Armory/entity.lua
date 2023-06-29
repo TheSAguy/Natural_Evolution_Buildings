@@ -3,6 +3,8 @@ local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
 local W_ICONPATH = NEBuildings.modRoot .. "/graphics/icons/weapon/"
 
+
+
 require("util")
 
 if settings.startup["NE_Difficulty"] and settings.startup["NE_Difficulty"].value then
@@ -14,78 +16,6 @@ end
 --- Value of Bio Damage per startup settings
 Bio_Ammo_Damage = settings.startup["NE_Bio_Ammo_Damage"].value
 
---- Turret Bonuses.
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.1
-})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.1
-})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.4
-})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-gun-turret",
-    modifier = 0.7
-})
-
-table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.1
-})
-table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.1
-})
-table.insert(data.raw.technology["physical-projectile-damage-3"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-4"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-5"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.2
-})
-table.insert(data.raw.technology["physical-projectile-damage-6"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.4
-})
-table.insert(data.raw.technology["physical-projectile-damage-7"].effects, {
-    type = "turret-attack",
-    turret_id = "NE-rocket-turret",
-    modifier = 0.7
-})
 
 -- Ammo
 data:extend({ 
@@ -599,10 +529,10 @@ data:extend({
 {
     type = "ammo",
     name = "firearm-magazine_c",
-    icon = ICONPATH .. "firearm-magazine_conversion.png",
+    icon = W_ICONPATH .. "firearm-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "firearm-magazine_conversion.png",
+        icon = W_ICONPATH .. "firearm-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -795,10 +725,10 @@ data:extend({
 {
     type = "ammo",
     name = "Biological-bullet-magazine_c",
-    icon = ICONPATH .. "Biological-bullet-magazine_conversion.png",
+    icon = W_ICONPATH .. "Biological-bullet-magazine_conversion.png",
     icon_size = 64,
     icons = {{
-        icon = ICONPATH .. "Biological-bullet-magazine_conversion.png",
+        icon = W_ICONPATH .. "Biological-bullet-magazine_conversion.png",
         icon_size = 64
     }},
     -- flags = {"goes-to-main-inventory"},
@@ -1179,7 +1109,8 @@ NE_rocket_turret_tint = {
 } -- Red
 
 --- Turret
-data:extend({ --- Dart Turret
+data:extend({ 
+    --- Dart Turret
 {
     type = "ammo-turret",
     name = "bi-dart-turret",
@@ -1196,8 +1127,6 @@ data:extend({ --- Dart Turret
     },
     max_health = 300,
     corpse = "medium-remnants",
-
-    -- darkfrei: just another size of boxes, that's all
     collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     rotation_speed = 0.05,

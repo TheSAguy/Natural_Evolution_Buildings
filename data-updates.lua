@@ -17,6 +17,22 @@ if mods["IndustrialRevolution3"] then
 end
 
 
+if mods["Krastorio2"] then
+
+    require("prototypes.Compatibility.Krastorio2")
+   
+end
+
+
+if mods["space-exploration"] then
+
+    require("prototypes.Compatibility.SE")
+   
+end
+
+
+
+
 
 
 ---- Add Long Range  & Rocket Turret to tech tree
@@ -30,8 +46,7 @@ thxbob.lib.tech.add_prerequisite("artillery", "bi_tech_bio_cannon")
 data.raw.item["alien-artifact"].icon = "__Natural_Evolution_Buildings__/graphics/icons/alien-artifact.png"
 
 ----- Updates to Ammo
-data.raw.recipe["piercing-rounds-magazine"].icon =
-    "__Natural_Evolution_Buildings__/graphics/icons/piercing_magazine_iron.png"
+data.raw.recipe["piercing-rounds-magazine"].icon = "__Natural_Evolution_Buildings__/graphics/icons/weapon/piercing_magazine_iron.png"
 data.raw.recipe["piercing-rounds-magazine"].icon_size = 64
 data.raw.ammo["piercing-rounds-magazine"].icon = "__base__/graphics/icons/piercing-rounds-magazine.png"
 data.raw.ammo["piercing-rounds-magazine"].icon_size = 64
