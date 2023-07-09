@@ -82,7 +82,9 @@ data:extend({ -- Projectile
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
     }}
-}, -- Basic
+}, 
+
+-- Basic
 {
     type = "projectile",
     name = "bi-bio-cannon-basic-ammo",
@@ -153,15 +155,7 @@ data:extend({ -- Projectile
         height = 47,
         frame_count = 1
     },
-    --[[
-	sound =
-	{
-		{
-			filename = "__Natural_Evolution_Buildings__/sound/launch.ogg",
-			volume = 4.0
-		},
-	},
-	]]
+
     smoke = {{
         name = "smoke-fast",
         deviation = {0.15, 0.15},
@@ -173,7 +167,9 @@ data:extend({ -- Projectile
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
     }}
-}, --- Poison
+}, 
+
+--- Poison
 {
     type = "projectile",
     name = "bi-bio-cannon-poison-ammo",
@@ -250,15 +246,7 @@ data:extend({ -- Projectile
         height = 47,
         frame_count = 1
     },
-    --[[
-	sound =
-	{
-		{
-			filename = "__Natural_Evolution_Buildings__/sound/launch.ogg",
-			volume = 4.0
-		},
-	},
-	]]
+
     smoke = {{
         name = "smoke-fast",
         deviation = {0.15, 0.15},
@@ -270,7 +258,9 @@ data:extend({ -- Projectile
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
     }}
-}, --- Bio
+}, 
+
+--- Bio
 {
     type = "projectile",
     name = "bi-bio-cannon-biological-ammo",
@@ -347,15 +337,7 @@ data:extend({ -- Projectile
         height = 47,
         frame_count = 1
     },
-    --[[
-	sound =
-	{
-		{
-			filename = "__Natural_Evolution_Buildings__/sound/launch.ogg",
-			volume = 4.0
-		},
-	},
-	]]
+
     smoke = {{
         name = "smoke-fast",
         deviation = {0.15, 0.15},
@@ -367,7 +349,9 @@ data:extend({ -- Projectile
         starting_frame_speed = 0,
         starting_frame_speed_deviation = 5
     }}
-}, ----- Fire Clouds. 
+}, 
+
+----- Fire Clouds. 
 ---- Small Fire Cloud
 {
     type = "smoke-with-trigger",
@@ -420,7 +404,9 @@ data:extend({ -- Projectile
         }
     },
     action_frequency = 30
-}, --- medium File Cloud
+}, 
+
+--- medium File Cloud
 {
     type = "smoke-with-trigger",
     name = "medium-fire-cloud",
@@ -472,7 +458,9 @@ data:extend({ -- Projectile
         }
     },
     action_frequency = 30
-}, --- Bio Cannon Explosion
+}, 
+
+--- Bio Cannon Explosion
 {
     type = "smoke-with-trigger",
     name = "bio-cannon-explosion",
@@ -497,7 +485,9 @@ data:extend({ -- Projectile
     cyclic = false,
     duration = 60 * 5,
     spread_duration = 10
-}, --- Napalm Small
+}, 
+
+--- Napalm Small
 {
     type = "projectile",
     name = "NE-Napalm-Small",
@@ -527,7 +517,9 @@ data:extend({ -- Projectile
         height = 1,
         priority = "high"
     }
-}, --- Napalm Large
+},
+
+--- Napalm Large
 {
     type = "projectile",
     name = "NE-Napalm-Large",
