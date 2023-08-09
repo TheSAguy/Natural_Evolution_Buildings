@@ -3,8 +3,8 @@ if not NE_Functions then
 end
 
 --- Add fuel values to Alien Artifacts.
-NE_Functions.Add_Fuel_Values("small-alien-artifact", "10MJ")
-NE_Functions.Add_Fuel_Values("alien-artifact", "250MJ")
+--NE_Functions.Add_Fuel_Values("small-alien-artifact", "10MJ")
+--NE_Functions.Add_Fuel_Values("alien-artifact", "250MJ")
 
 if mods["bobenemies"] then
 

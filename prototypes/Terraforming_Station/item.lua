@@ -61,6 +61,6 @@ data:extend({{
     },
     magazine_size = 1,
     subgroup = "Materials",
-    order = "a[basic-clips]-a[firearm-magazine]",
+    order = "a[basic-item]-a[Alien-Stimulant]",
     stack_size = 200
 }})

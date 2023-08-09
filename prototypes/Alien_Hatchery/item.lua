@@ -41,4 +41,49 @@ data:extend({ ---- Alien Hatchery
     subgroup = "defensive-structure",
     order = "a[stone-wall]-a[living-wall]",
     stack_size = 50
-}})
+},
+
+
+})
+
+if not data.raw.capsule["first-aid-kit"] then
+data:extend({ 
+
+
+  {
+      type = "capsule",
+      name = "first-aid-kit",
+      icon = ICONPATH ..  "first-aid-kit.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      capsule_action = {
+        type = "use-on-self",
+        attack_parameters = {
+          type = "projectile",
+          ammo_category = "capsule",
+          cooldown = 300,
+          range = 0,
+          ammo_type = {
+            category = "capsule",
+            target_type = "position",
+            action = {
+              type = "direct",
+              action_delivery = {
+                type = "instant",
+                target_effects = {
+                  type = "damage",
+                  damage = { type = "physical", amount = -300 },
+                },
+              },
+            },
+          },
+        },
+      },
+--      subgroup = "Materials",
+      subgroup = "Natural-Evolution",
+      order = "a[basic-item]-a[Alien-Stimulant]",
+      stack_size = 50,
+    }
+
+})
+end

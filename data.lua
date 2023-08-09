@@ -84,6 +84,7 @@ thxbob.lib.tech.add_recipe_unlock("military-2", "bi_recipe_enhanced_dart_magazin
 thxbob.lib.tech.add_recipe_unlock("military-3", "bi_recipe_poison_dart_magazine")
 thxbob.lib.tech.add_recipe_unlock("military-2", "piercing_magazine_copper")
 thxbob.lib.tech.add_recipe_unlock("explosive-rocketry", "NE_Napalm_Rocket")
+thxbob.lib.tech.add_recipe_unlock("military", "first-aid-kit")
 
 
 ---------------------------------------------------------------

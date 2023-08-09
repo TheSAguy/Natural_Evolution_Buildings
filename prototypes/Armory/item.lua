@@ -1,7 +1,9 @@
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local ICONPATH = NEBuildings.modRoot .. "/graphics/icons/"
 
-data:extend({ ---- Bio Land Mine
+data:extend({ 
+    
+    ---- Bio Land Mine
 {
     type = "item",
     name = "bio_land_mine",
@@ -17,7 +19,9 @@ data:extend({ ---- Bio Land Mine
     place_result = "bio_land_mine",
     stack_size = 100,
     trigger_radius = 1.5
-}, --- Dart Turret
+}, 
+
+--- Dart Turret
 {
     type = "item",
     name = "bi-dart-turret",
@@ -31,7 +35,9 @@ data:extend({ ---- Bio Land Mine
     order = "b[turret]-x[gun-turret]",
     place_result = "bi-dart-turret",
     stack_size = 50
-}, --- Long Range Turret
+}, 
+
+--- Long Range Turret
 {
     type = "item",
     name = "NE-gun-turret",
@@ -45,7 +51,9 @@ data:extend({ ---- Bio Land Mine
     order = "c[turret]-x[NE-gun-turret]",
     place_result = "NE-gun-turret",
     stack_size = 50
-}, --- Rocket Turret
+}, 
+
+--- Rocket Turret
 {
     type = "item",
     name = "NE-rocket-turret",

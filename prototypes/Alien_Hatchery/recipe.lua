@@ -616,7 +616,9 @@ data:extend({ ---- special liquids for hatchery operation
         amount = 10
     }},
     subgroup = "Evolution-fluids"
-}, {
+}, 
+
+{
     type = "recipe",
     name = "NE_enhanced-alien-nutrientant",
     category = "chemistry",
@@ -638,4 +640,19 @@ data:extend({ ---- special liquids for hatchery operation
     }},
 
     subgroup = "Evolution-fluids"
-}})
+},
+
+{
+    type = "recipe",
+    name = "first-aid-kit",
+    energy_required = 5,
+    enabled = false,
+    allow_productivity = true,
+    ingredients = {
+      { "alien-artifact", 1 },
+      { "copper-plate", 1 },
+    },
+    result = "first-aid-kit",
+  },
+
+})
