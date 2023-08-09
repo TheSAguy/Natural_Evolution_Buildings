@@ -1,5 +1,9 @@
--- NE BUILDINGS Ver = 1.1.01
+-- NE BUILDINGS Ver = 1.1.x
 local QC_Mod = false
+
+
+if script.active_mods["gvv"] then require("__gvv__.gvv")() end
+
 local NEBuildings = require('common')('Natural_Evolution_Buildings')
 local Event = require('__stdlib__/stdlib/event/event').set_protected_mode(true)
 
@@ -545,7 +549,6 @@ end)
 --- Living Wall & Pheromone Concrete Stuff
 Event.register(defines.events.on_tick, function(event)
 
-    --- EvoGUI Stuff
     --- EvoGUI Stuff
     if game.active_mods["EvoGUI"] then
 
